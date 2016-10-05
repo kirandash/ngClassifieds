@@ -33,3 +33,5 @@ cd ..
 npm install http-server -g
 
 http-server
+
+IIFE functions: Immediately invoked function expressions

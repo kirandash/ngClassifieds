@@ -1,1 +1,1 @@
-angular.module("ngClassifieds", []);
+angular.module("ngClassifieds", []); // creating new module

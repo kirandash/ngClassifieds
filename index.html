@@ -3,9 +3,12 @@
 <head>
 	<title>ngClassifieds</title>
 </head>
-<body ng-app="ngClassifieds" ng-init="message='Hello World!'">
-	<h1>{{ message }}</h1>
+<!-- app directive to wrap container for our app. controller directive to tie controller to view -->
+<body ng-app="ngClassifieds" ng-controller="classifiedsCtrl">
+	
+	<h1>{{ name }}</h1>
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
+	<script type="text/javascript" src="components/classifieds.ctr.js"></script>
 </body>
 </html>
