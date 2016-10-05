@@ -6,15 +6,12 @@
 <!-- app directive to wrap container for our app. controller directive to tie controller to view -->
 <body ng-app="ngClassifieds" ng-controller="classifiedsCtrl">
 	
-	<!-- model directive to tie name property TWO WAY DATA BINDING -->
-	<input type="text" placeholder="Enter your first name" ng-model="name.first">
-	<input type="text" placeholder="Enter your last name" ng-model="name.last">
-	<input type="text" placeholder="Enter your user name" ng-model="username">
-	<!-- Property templated out -->
-	<h1>{{ name.first + ' ' + name.last }}</h1>
-	<h1>{{ 5+2 }}</h1>
-	<h1>{{ username }}</h1>
+	<hello-world></hello-world>
+
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+	<script type="text/javascript" src="node_modules/angular-animate/angular-animate.js"></script>
+	<script type="text/javascript" src="node_modules/angular-aria/angular-aria.js"></script>
+	<script type="text/javascript" src="node_modules/angular-material/angular-material.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 	<script type="text/javascript" src="components/classifieds.ctr.js"></script>
 </body>

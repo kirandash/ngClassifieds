@@ -16,5 +16,7 @@
 
 			$scope.username = 'kirandash';
 
+			$scope.message = 'Hello World';
+
 		}); // controller defined - MVC
 })();
