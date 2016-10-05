@@ -7,9 +7,13 @@
 <body ng-app="ngClassifieds" ng-controller="classifiedsCtrl">
 	
 	<!-- model directive to tie name property TWO WAY DATA BINDING -->
-	<input type="text" placeholder="Enter your name" ng-model="name">
+	<input type="text" placeholder="Enter your first name" ng-model="name.first">
+	<input type="text" placeholder="Enter your last name" ng-model="name.last">
+	<input type="text" placeholder="Enter your user name" ng-model="username">
 	<!-- Property templated out -->
-	<h1>{{ name }}</h1>
+	<h1>{{ name.first + ' ' + name.last }}</h1>
+	<h1>{{ 5+2 }}</h1>
+	<h1>{{ username }}</h1>
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 	<script type="text/javascript" src="components/classifieds.ctr.js"></script>
