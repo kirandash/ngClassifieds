@@ -31,3 +31,5 @@ cd node_modules
 cd ..
 
 npm install http-server -g
+
+http-server
