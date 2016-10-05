@@ -6,6 +6,9 @@
 <!-- app directive to wrap container for our app. controller directive to tie controller to view -->
 <body ng-app="ngClassifieds" ng-controller="classifiedsCtrl">
 	
+	<!-- model directive to tie name property TWO WAY DATA BINDING -->
+	<input type="text" placeholder="Enter your name" ng-model="name">
+	<!-- Property templated out -->
 	<h1>{{ name }}</h1>
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
