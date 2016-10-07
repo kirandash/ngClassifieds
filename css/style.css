@@ -1,0 +1,9 @@
+button.md-button {
+	padding-left: 24px;
+}
+
+button .material-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
