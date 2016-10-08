@@ -24,9 +24,11 @@
 			<img ng-src="{{ classified.image }}">
 			<md-card-content>
 				<div class="classified-info">
-					<h2 class="md-title">{{ classified.title }}</h2>
+					<h2 class="md-title">{{ classified.title | uppercase }}</h2>
+					<h2 class="md-title">{{ classified.posted | date:'longDate' }}</h2>
 					<h3>{{ classified.price }}</h3>
-					<p>{{ classified.description }}</p>
+					<p>{{ classified.description | lowercase }}</p>
+					<pre>{{ classified | json }}</pre>
 				</div>
 			</md-card-content>
 		</md-card>
