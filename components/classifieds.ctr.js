@@ -12,7 +12,7 @@
 			$scope.classifieds = [
 				{
 					title: "First Item",
-					price: "1,00,000",
+					price: "$1,00,000",
 					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
 					posted: "2016-12-11",
 					contact: {
@@ -29,7 +29,7 @@
 				},
 				{
 					title: "Second Item",
-					price: "2,00,000",
+					price: "$2,00,000",
 					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
 					posted: "2016-05-11",
 					contact: {
@@ -46,7 +46,7 @@
 				},
 				{
 					title: "Third Item",
-					price: "3,00,000",
+					price: "$3,00,000",
 					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
 					posted: "2016-05-11",
 					contact: {
@@ -63,7 +63,7 @@
 				},
 				{
 					title: "Fourth Item",
-					price: "4,00,000",
+					price: "$4,00,000",
 					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
 					posted: "2016-05-11",
 					contact: {
@@ -80,7 +80,7 @@
 				},
 				{
 					title: "Fifth Item",
-					price: "5,00,000",
+					price: "$5,00,000",
 					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
 					posted: "2016-05-11",
 					contact: {
@@ -96,7 +96,7 @@
 					views: '235'				},
 				{
 					title: "Sixth Item",
-					price: "6,00,000",
+					price: "$6,00,000",
 					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
 					posted: "2016-05-11",
 					contact: {
@@ -113,7 +113,7 @@
 				},
 				{
 					title: "Seventh Item",
-					price: "7,00,000",
+					price: "$7,00,000",
 					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
 					posted: "2016-05-11",
 					contact: {
