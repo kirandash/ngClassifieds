@@ -6,129 +6,16 @@
 		.module("ngClassifieds") // reference existing module - not creating new module
 
 		// scope is the special object of our controller which acts as glue betweeen contoller and view
-		.controller("classifiedsCtrl", function($scope){
+		.controller("classifiedsCtrl", function($scope, $http){
 			
-			// property defined
-			$scope.classifieds = [
-				{
-					title: "First Item",
-					price: "$1,00,000",
-					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
-					posted: "2016-12-11",
-					contact: {
-						name: 'Kiran Dash',
-						phone: '+91-8121171321',
-						email: 'thekirankumardash@gmail.com'
-					},
-					categories: [
-						'vehicles',
-						'parts and accesscories'
-					],
-					image: 'http://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg',
-					views: '235'
-				},
-				{
-					title: "Second Item",
-					price: "$2,00,000",
-					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
-					posted: "2016-05-11",
-					contact: {
-						name: 'Kiran Dash',
-						phone: '+91-8121171321',
-						email: 'thekirankumardash@gmail.com'
-					},
-					categories: [
-						'vehicles',
-						'parts and accesscories'
-					],
-					image: 'http://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg',
-					views: '235'
-				},
-				{
-					title: "Third Item",
-					price: "$3,00,000",
-					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
-					posted: "2016-05-11",
-					contact: {
-						name: 'Kiran Dash',
-						phone: '+91-8121171321',
-						email: 'thekirankumardash@gmail.com'
-					},
-					categories: [
-						'vehicles',
-						'parts and accesscories'
-					],
-					image: 'http://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg',
-					views: '235'
-				},
-				{
-					title: "Fourth Item",
-					price: "$4,00,000",
-					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
-					posted: "2016-05-11",
-					contact: {
-						name: 'Kiran Dash',
-						phone: '+91-8121171321',
-						email: 'thekirankumardash@gmail.com'
-					},
-					categories: [
-						'vehicles',
-						'parts and accesscories'
-					],
-					image: 'http://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg',
-					views: '235'
-				},
-				{
-					title: "Fifth Item",
-					price: "$5,00,000",
-					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
-					posted: "2016-05-11",
-					contact: {
-						name: 'Kiran Dash',
-						phone: '+91-8121171321',
-						email: 'thekirankumardash@gmail.com'
-					},
-					categories: [
-						'vehicles',
-						'parts and accesscories'
-					],
-					image: 'http://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg',
-					views: '235'				},
-				{
-					title: "Sixth Item",
-					price: "$6,00,000",
-					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
-					posted: "2016-05-11",
-					contact: {
-						name: 'Kiran Dash',
-						phone: '+91-8121171321',
-						email: 'thekirankumardash@gmail.com'
-					},
-					categories: [
-						'vehicles',
-						'parts and accesscories'
-					],
-					image: 'http://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg',
-					views: '235'
-				},
-				{
-					title: "Seventh Item",
-					price: "$7,00,000",
-					description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac arcu sit amet lacus ullamcorper tincidunt. Nulla placerat ex nulla, ut tempor leo lacinia non. Morbi pharetra sagittis ante. Sed id ornare enim. Aenean dictum dignissim justo, nec convallis sapien aliquet a. Maecenas in justo vulputate, sagittis lectus facilisis, consectetur velit. Proin quis viverra lorem. Donec tempus ante vitae lacus feugiat tempus. Praesent et hendrerit turpis. Etiam non nisi felis.",
-					posted: "2016-05-11",
-					contact: {
-						name: 'Kiran Dash',
-						phone: '+91-8121171321',
-						email: 'thekirankumardash@gmail.com'
-					},
-					categories: [
-						'vehicles',
-						'parts and accesscories'
-					],
-					image: 'http://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg',
-					views: '235'
-				}
-			]
+			// get method has promises, once the task is done then the code inside it will execute. any code outside will run 
+			// independent of promises
+
+			$http.get('data/classifieds.json').then(function(classifieds){
+				// property defined				
+				// console.log(data);
+				$scope.classifieds = classifieds.data;
+			});
 
 		}); // controller defined - MVC
 })();

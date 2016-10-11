@@ -35,3 +35,5 @@ npm install http-server -g
 http-server
 
 IIFE functions: Immediately invoked function expressions
+
+Note: JSON key and value pair should be in double quotes
