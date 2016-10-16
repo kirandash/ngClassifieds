@@ -6,7 +6,7 @@
 		.module("ngClassifieds") // reference existing module - not creating new module
 
 		// scope is the special object of our controller which acts as glue betweeen contoller and view
-		.controller("classifiedsCtrl", function($scope, $http, classifiedsFactory, $mdSidenav, $mdToast){
+		.controller("classifiedsCtrl", function($scope, $http, classifiedsFactory, $mdSidenav, $mdToast, $mdDialog){
 			
 			// get method has promises, once the task is done then the code inside it will execute. any code outside will run 
 			// independent of promises
@@ -54,6 +54,22 @@
 				$scope.classified = {}; // empty the classified object on save edit - to empty the form
 				$scope.closeSidebar(); // close sidebar on save edit
 				showToast("Edit Saved!");
+			}
+
+			$scope.deleteClassified = function(event, classified){
+				var confirm = $mdDialog.confirm()
+					.title('Are you sure you want to delete '+ classified.title + '?')
+					.ok('Yes')
+					.cancel('No')
+					.targetEvent(event);
+
+				// Promise to check once confirm variable is shown					
+				$mdDialog.show(confirm).then(function(){
+					var index = $scope.classifieds.indexOf(classified); // get index of to be deleted classified from the classifieds array
+					$scope.classifieds.splice(index, 1); // take one item from the array
+				}, function(){
+					// else case if cancel is pressed
+				});
 			}
 
 			function showToast(message){
