@@ -39,13 +39,30 @@
 					$scope.classifieds.push(classified); // push classified object from form to existing classifieds array
 					$scope.classified = {}; // empty the classified object on save - to empty the form
 					$scope.closeSidebar(); // close sidebar on save
-					$mdToast.show(
-						$mdToast.simple()
-							.content("Classified saved")
-							.position('top, right')
-							.hideDelay(3000)
-					);
+					showToast("Classified Saved!");
 				}
+			}
+
+			$scope.editClassified = function(classified){
+				$scope.editing = true; // set the flag on for editing
+				$scope.openSidebar(); // open sidebar on edit
+				$scope.classified = classified; // aligning classified for editing to edit form
+			}
+
+			$scope.saveEdit = function(){
+				$scope.editing = false; // set the flag off for editing
+				$scope.classified = {}; // empty the classified object on save edit - to empty the form
+				$scope.closeSidebar(); // close sidebar on save edit
+				showToast("Edit Saved!");
+			}
+
+			function showToast(message){
+				$mdToast.show(
+					$mdToast.simple()
+						.content(message)
+						.position('top, right')
+						.hideDelay(3000)
+				);				
 			}
 
 		}); // controller defined - MVC
