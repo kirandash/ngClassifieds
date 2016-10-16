@@ -15,6 +15,7 @@
 				// property defined				
 				// console.log(data);
 				$scope.classifieds = classifieds.data;
+				$scope.categories = getCategories($scope.classifieds); // Placed inside classifiedsFactory because of the ajax request 
 			});
 
 			var contact = {
@@ -22,6 +23,7 @@
 				phone: "(555) 555-55555",
 				email: "thekirankumardash@gmail.com"
 			} // contact object - simulation of user data on login
+
 
 			$scope.openSidebar = function() {
 				// md-component-id passed to mdsidenav
@@ -79,6 +81,19 @@
 						.position('top, right')
 						.hideDelay(3000)
 				);				
+			}
+
+			function getCategories(classifieds){
+
+				var categories = [];
+
+				angular.forEach(classifieds, function(item){
+					angular.forEach(item.categories, function(category){
+						categories.push(category);
+					});
+				});
+
+				return _.uniq(categories);
 			}
 
 		}); // controller defined - MVC
