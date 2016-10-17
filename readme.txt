@@ -37,3 +37,5 @@ http-server
 IIFE functions: Immediately invoked function expressions
 
 Note: JSON key and value pair should be in double quotes
+
+npm install angular-ui-router
