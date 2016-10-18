@@ -8,14 +8,29 @@
 		// scope is the special object of our controller which acts as glue betweeen contoller and view
 		.controller("classifiedsCtrl", function($scope, $http, classifiedsFactory, $mdSidenav, $mdToast, $mdDialog){
 			
+			// capture variable
+			var vm = this;
+
+			vm.categories;
+			vm.classified;
+			vm.classifieds;
+			vm.closeSidebar = closeSidebar; 
+			vm.deleteClassified = deleteClassified; 
+			vm.editing;
+			vm.editClassified = editClassified; 
+			vm.openSidebar = openSidebar; // member openSidebar of vm is referencing to the function
+			vm.saveClassified = saveClassified; 
+			vm.saveEdit = saveEdit;
+			
+
 			// get method has promises, once the task is done then the code inside it will execute. any code outside will run 
 			// independent of promises
 
 			classifiedsFactory.getClassifieds().then(function(classifieds){
 				// property defined				
 				// console.log(data);
-				$scope.classifieds = classifieds.data;
-				$scope.categories = getCategories($scope.classifieds); // Placed inside classifiedsFactory because of the ajax request 
+				vm.classifieds = classifieds.data;
+				vm.categories = getCategories(vm.classifieds); // Placed inside classifiedsFactory because of the ajax request 
 			});
 
 			var contact = {
@@ -25,40 +40,40 @@
 			} // contact object - simulation of user data on login
 
 
-			$scope.openSidebar = function() {
+			function openSidebar() {
 				// md-component-id passed to mdsidenav
 				$mdSidenav('left').open();
 			}
 
-			$scope.closeSidebar = function() {
+			function closeSidebar() {
 				// md-component-id passed to mdsidenav
 				$mdSidenav('left').close();
 			}
 
-			$scope.saveClassified = function(classified){
+			function saveClassified(classified){
 				if(classified){
 					classified.contact = contact;
-					$scope.classifieds.push(classified); // push classified object from form to existing classifieds array
-					$scope.classified = {}; // empty the classified object on save - to empty the form
-					$scope.closeSidebar(); // close sidebar on save
+					vm.classifieds.push(classified); // push classified object from form to existing classifieds array
+					vm.classified = {}; // empty the classified object on save - to empty the form
+					closeSidebar(); // close sidebar on save
 					showToast("Classified Saved!");
 				}
 			}
 
-			$scope.editClassified = function(classified){
-				$scope.editing = true; // set the flag on for editing
-				$scope.openSidebar(); // open sidebar on edit
-				$scope.classified = classified; // aligning classified for editing to edit form
+			function editClassified(classified){
+				vm.editing = true; // set the flag on for editing
+				openSidebar(); // open sidebar on edit
+				vm.classified = classified; // aligning classified for editing to edit form
 			}
 
-			$scope.saveEdit = function(){
-				$scope.editing = false; // set the flag off for editing
-				$scope.classified = {}; // empty the classified object on save edit - to empty the form
-				$scope.closeSidebar(); // close sidebar on save edit
+			function saveEdit(){
+				vm.editing = false; // set the flag off for editing
+				vm.classified = {}; // empty the classified object on save edit - to empty the form
+				closeSidebar(); // close sidebar on save edit
 				showToast("Edit Saved!");
 			}
 
-			$scope.deleteClassified = function(event, classified){
+			function deleteClassified(event, classified){
 				var confirm = $mdDialog.confirm()
 					.title('Are you sure you want to delete '+ classified.title + '?')
 					.ok('Yes')
@@ -67,8 +82,8 @@
 
 				// Promise to check once confirm variable is shown					
 				$mdDialog.show(confirm).then(function(){
-					var index = $scope.classifieds.indexOf(classified); // get index of to be deleted classified from the classifieds array
-					$scope.classifieds.splice(index, 1); // take one item from the array
+					var index = vm.classifieds.indexOf(classified); // get index of to be deleted classified from the classifieds array
+					vm.classifieds.splice(index, 1); // take one item from the array
 				}, function(){
 					// else case if cancel is pressed
 				});

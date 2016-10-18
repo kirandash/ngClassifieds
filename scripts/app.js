@@ -6,30 +6,9 @@ angular.module("ngClassifieds", ["ngMaterial", "ui.router"]) // creating new mod
 	   		.accentPalette('orange');
 
 	   		$stateProvider
-	   			.state('stateone', {
-	   				url: '/stateone',
-	   				template: '<h1>State One {{ stateone.message }}</h1>', // alias . notation controller for larger project
-	   				controller: 'stateOneCtrl as stateone' // alias for controller
-	   			})
-	   			.state('statetwo', {
-	   				url: '/statetwo',
-	   				template: '<h1>State Two</h1><md-button ui-sref="statetwo.more">Go to nested state</md-button><ui-view></ui-view>'
-	   			})
-	   			.state('statetwo.more', {
-	   				url: '/more',
-	   				template: '<p>This is a deeper nested state</p>'
+	   			.state('classifieds', {
+	   				url: '/classifieds',
+	   				templateUrl: 'components/classifieds.tpl.html',
+	   				controller: 'classifiedsCtrl as vm' // alias for controller
 	   			});
-	   })
-
-	   .controller('stateOneCtrl', function(){
-	   		// capture variable - vm = view model
-	   		// remove $scope to avoid scope soup for larger projects in angular
-	   		var vm = this;
-	   		vm.message = "Hey from state one";
-	   })
-	   // custom directive
-	   .directive("helloWorld", function(){
-	   		return{
-	   			template: "<h1>{{ message }}</h1>"
-	   		}
 	   }); 
