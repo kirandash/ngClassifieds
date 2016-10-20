@@ -6,7 +6,7 @@
 		.module("ngClassifieds") // reference existing module - not creating new module
 
 		// scope is the special object of our controller which acts as glue betweeen contoller and view
-		.controller("classifiedsCtrl", function($scope, $http, classifiedsFactory, $mdSidenav, $mdToast, $mdDialog){
+		.controller("classifiedsCtrl", function($scope, $state, $http, classifiedsFactory, $mdSidenav, $mdToast, $mdDialog){
 			
 			// capture variable
 			var vm = this;
@@ -42,7 +42,7 @@
 
 			function openSidebar() {
 				// md-component-id passed to mdsidenav
-				$mdSidenav('left').open();
+				$state.go('classifieds.new');
 			}
 
 			function closeSidebar() {

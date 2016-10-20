@@ -8,7 +8,12 @@ angular.module("ngClassifieds", ["ngMaterial", "ui.router"]) // creating new mod
 	   		$stateProvider
 	   			.state('classifieds', {
 	   				url: '/classifieds',
-	   				templateUrl: 'components/classifieds.tpl.html',
+	   				templateUrl: 'components/classifieds/classifieds.tpl.html',
 	   				controller: 'classifiedsCtrl as vm' // alias for controller
+	   			})
+	   			.state('classifieds.new', {
+	   				url: '/new',
+	   				templateUrl: 'components/classifieds/new/classifieds.new.tpl.html',
+	   				controller: 'newClassifiedsCtrl as vm' // alias for controller
 	   			});
 	   }); 

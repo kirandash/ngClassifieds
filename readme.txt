@@ -39,3 +39,21 @@ IIFE functions: Immediately invoked function expressions
 Note: JSON key and value pair should be in double quotes
 
 npm install angular-ui-router
+
+cd components
+
+ls
+
+mv classifieds.ctr.js classifieds.fac.js classifieds
+
+cd classifieds
+
+ls
+
+mkdir new
+
+mkdir edit
+
+cd new
+
+touch classifieds.new.tpl.html
